@@ -80,7 +80,7 @@ def test_libreria():
 
 
 if __name__ == "__main__":
-	driver = webdriver.Firefox()
+	driver = webdriver.Chrome()
 	test_sistema()
 	test_diccionario()
 	test_aplicacion()

@@ -18,6 +18,7 @@ def test_sistema():
 	WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "esen:16905")))
 	element = driver.find_element_by_css_selector("#esen\:16905 > td:nth-child(3)")
 	inner_english_text = driver.execute_script("return arguments[0].innerText", element)
+	# Remove last two characters from the word (the space and the type of word) in order to compare it correctly with the expected translation
 	clean_inner_english_text = inner_english_text[:-2]
 	print str(clean_inner_english_text)
 
